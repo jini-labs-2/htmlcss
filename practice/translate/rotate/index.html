@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-top: 100px;
+      gap: 2rem;
+    }
+
+    .translate-z-test-case2 {
+      width: 300px;
+      height: 300px;
+      overflow: scroll;
+      perspective: 100px;
+    }
+
+    .bg {
+      width: 500px;
+      height: 500px;
+      background: lightgrey;
+    }
+
+    .hurdle {
+      background: tomato;
+      width: 100px;
+      height: 100px;
+      transform: rotateY(80deg);
+      text-align: center;
+      line-height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <section id="section">
+    <div class="translate-z-test-case2">
+      <div class="bg"></div>
+      <div class="hurdle" style="position: absolute; top: 100px; left: 100px;">職</div>
+      <div class="hurdle" style="position: absolute; top: 100px; left: 150px;">あ</div>
+      <div class="hurdle" style="position: absolute; top: 100px; left: 200px;">A</div>
+      <div class="hurdle" style="position: absolute; top: 100px; left: 250px;">9</div>
+    </div>
+  </section>
+</body>
+
+</html>
