@@ -1,0 +1,57 @@
+#main {
+  width: 800px;
+  margin: 0 auto;
+
+}
+
+td {
+  width: 80px;
+  padding: .5rem 1.5rem;
+  text-align: center;
+}
+
+#table1 {
+
+}
+
+#table2 {
+  table, tr, td {
+    border: 1px solid #0000ff;
+  }
+}
+
+#table3 {
+  table, tr, td {
+    border: 1px solid #00ff00;
+  }
+  table {
+    border-collapse: collapse;
+  }
+}
+
+#table4 {
+  table, tr, td {
+    border: 1px solid #ff0000;
+  }
+  table {
+    border-collapse: collapse;
+  }
+}
+
+#table5 {
+  table, tr, td {
+    border: 1px solid #0000ff;
+  }
+  table {
+    border-collapse: collapse;
+  }
+}
+
+#table6 {
+  table, tr, td {
+    border: 1px solid #0000ff;
+  }
+  table {
+    border-collapse: collapse;
+  }
+}
