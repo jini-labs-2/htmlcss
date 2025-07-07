@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #wrap {
+      width: 800px;
+    }
+
+    #wrap * {
+      text-align: center;
+    }
+
+    .test-box-1 {
+      width: 60px;
+      height: 30px;
+      margin: 8px;
+      background-color: #50a0e0;
+      border: 1px solid #ccc;
+    }
+
+    #section-1 .content {
+      width: 700px;
+      height: 80px;
+      display: flex;
+      background-color: #ffe4c4;
+    }
+
+    #section-2 .content {
+      width: 700px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      background-color: #ffe4c4;
+    }
+
+    #section-3 .content {
+      width: 700px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      background-color: #ffe4c4;
+    }
+
+    #section-11 .content {
+      width: 700px;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      background-color: #ffe4c4;
+    }
+
+    #section-12 .content {
+      width: 700px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #ffe4c4;
+    }
+
+    #section-13 .content {
+      width: 700px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #ffe4c4;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="section-1">
+      <div class="section-title">direction defalut is <strong><mark>row</mark></strong>. </div>
+      <div class="content">
+        <div class="test-box-1"></div>
+        <div class="test-box-1"></div>
+        <div class="test-box-1"></div>
+      </div>
+    </div>
+    <div id="section-2">
+      <div class="section-title"><strong>justify-content</strong> <mark>center</mark>.
+      </div>
+      <div class="content">
+        <div class="test-box-1"></div>
+        <div class="test-box-1"></div>
+        <div class="test-box-1"></div>
+      </div>
+    </div>
+    <div id="section-3">
+      <div class="section-title"><strong>align-item</strong> <mark>center</mark></div>
+      <div class="content">
+        <div class="test-box-1"></div>
+        <div class="test-box-1"></div>
+        <div class="test-box-1"></div>
+      </div>
+    </div>
+    <div id="section-11">
+      <div class="section-title">direction defalut is <strong><mark>column</mark></strong>. </div>
+      <div class="content">
+        <div class="test-box-1"></div>
+        <div class="test-box-1"></div>
+        <div class="test-box-1"></div>
+      </div>
+    </div>
+    <div id="section-12">
+      <div class="section-title"><strong>justify-content</strong> <mark>center</mark>.
+      </div>
+      <div class="content">
+        <div class="test-box-1"></div>
+        <div class="test-box-1"></div>
+        <div class="test-box-1"></div>
+      </div>
+    </div>
+    <div id="section-13">
+      <div class="section-title"><strong>align-item</strong> <mark>center</mark></div>
+      <div class="content">
+        <div class="test-box-1"></div>
+        <div class="test-box-1"></div>
+        <div class="test-box-1"></div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+
+</html>
