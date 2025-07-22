@@ -1,0 +1,41 @@
+/* #table1 > table, #table1 > tbody, #table1 > th, #table1 > tr, #table1 > td { */
+#table2 table, 
+#table2 tbody, 
+#table2 th, 
+#table2 tr, 
+#table2 td {
+  border: 1px solid black;
+}
+
+#table3 table, 
+#table3 tbody, 
+#table3 th, 
+#table3 tr, 
+#table3 td {
+  border: 1px solid black;
+}
+#table3 table {
+  border-collapse: collapse;
+}
+
+#table4 table, 
+#table4 tbody, 
+#table4 th, 
+#table4 tr, 
+#table4 td {
+  border: 1px solid black;
+}
+#table4 table {
+  border-collapse: collapse;
+}
+
+#table5 table, 
+#table5 tbody, 
+#table5 th, 
+#table5 tr, 
+#table5 td {
+  border: 1px solid black;
+}
+#table5 table {
+  border-collapse: collapse;
+}
