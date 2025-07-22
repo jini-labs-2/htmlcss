@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Test</title>
+    <style>
+        body {
+          background-color: beige;
+        }
+        .container {
+
+            display: inline-block;
+            width: 300px;
+            background-color: lightgray;
+
+            /* align-items: center; */
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: steelblue;
+            /* transition: transform 0.5s ease-in-out 250ms; */
+            transition: all 0.5s ease-in-out 250ms;
+          }
+        .container:hover .box {
+          position: absolute;
+            /* transform: translateX(100px) translateY(20px); */
+          width: 200px;
+          height: 200px;
+          background-color: tomato;
+          border-radius: 10%
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
