@@ -1,41 +1,212 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transition Test</title>
-    <style>
-        body {
-          background-color: beige;
-        }
-        .container {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-            display: inline-block;
-            width: 300px;
-            background-color: lightgray;
+    #main {
+      margin: 1rem;
+    }
 
-            /* align-items: center; */
-        }
-        .box {
-            width: 100px;
-            height: 100px;
-            background-color: steelblue;
-            /* transition: transform 0.5s ease-in-out 250ms; */
-            transition: all 0.5s ease-in-out 250ms;
-          }
-        .container:hover .box {
-          position: absolute;
-            /* transform: translateX(100px) translateY(20px); */
-          width: 200px;
-          height: 200px;
-          background-color: tomato;
-          border-radius: 10%
-        }
-    </style>
+    .desc {
+      color: white;
+      text-align: center;
+    }
+
+    #test-box-1 {
+      width: 100px;
+      height: 60px;
+      background-color: brown;
+      transition: width 2s;
+    }
+
+    #test-box-1:hover {
+      width: 300px;
+    }
+
+    #test-box-2 {
+      width: 100px;
+      height: 60px;
+      font-size: 6px;
+      background-color: blue;
+      transition-property: width;
+      transition-duration: 2s;
+      transition-timing-function: linear;
+      transition-delay: 1s;
+    }
+
+    #test-box-2:hover {
+      width: 300px;
+      height: 180px;
+      font-size: 14px;
+    }
+
+    #test-box-3 {
+      width: 100px;
+      height: 60px;
+      background-color: blue;
+      transition: width 2s, height 4s;
+    }
+
+    #test-box-3:hover {
+      width: 300px;
+      height: 180px;
+    }
+
+    #test-box-10 {
+      width: 100px;
+      height: 60px;
+      background-color: blueviolet;
+    }
+
+    #test-box-10:hover {
+      width: 300px;
+      transition: width 2s linear;
+    }
+
+    #test-box-11 {
+      width: 100px;
+      height: 60px;
+      background-color: blueviolet;
+    }
+
+    #test-box-11:hover {
+      width: 300px;
+      transition: width 2s ease;
+    }
+
+    #test-box-12 {
+      width: 100px;
+      height: 60px;
+      background-color: blueviolet;
+    }
+
+    #test-box-12:hover {
+      width: 300px;
+      transition: width 2s ease-in;
+    }
+
+    #test-box-13 {
+      width: 100px;
+      height: 60px;
+      background-color: blueviolet;
+    }
+
+    #test-box-13:hover {
+      width: 300px;
+      transition: width 2s ease-out;
+    }
+
+    #test-box-14 {
+      width: 100px;
+      height: 60px;
+      font-size: 14px;
+      background-color: blueviolet;
+    }
+
+    #test-box-14:hover {
+      width: 300px;
+      transition: width 2s ease-in-out;
+    }
+  </style>
+  </style>
 </head>
+
 <body>
+  <header id="header"></header>
+  <nav id="nav"></nav>
+  <main id="main">
     <div class="container">
-        <div class="box"></div>
+
+      <div class="section">
+        <div class="title">
+          <h3>1. 横幅</h3>
+        </div>
+        <div id="test-box-1" class="testbox">
+          <p class="desc">hover me</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="title">
+          <h3>2. properties</h3>
+        </div>
+        <div id="test-box-2" class="testbox">
+          <p class="desc">hover me<br />
+            transition-property: width; <br />
+            transition-duration: 2s; <br />
+            transition-timing-function: linear; <br />
+            transition-delay: 1s; <br />
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="title">
+          <h3>3. 横幅+縦幅 2秒、縦幅1秒</h3>
+        </div>
+        <div id="test-box-3" class="testbox">
+          <p class="desc">hover me</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="title">
+          <h3>4. timing </h3>
+        </div>
+        <div id="test-box-10" class="testbox">
+          <p class="desc">hover me<br />linear 2s</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="title">
+        </div>
+        <div id="test-box-11" class="testbox">
+          <p class="desc">hover me<br />ease 2s</p>
+        </div>
+      </div>
     </div>
+
+    <div class="section">
+      <div class="title">
+      </div>
+      <div id="test-box-12" class="testbox">
+        <p class="desc">hover me<br />ease-in 2s</p>
+      </div>
+    </div>
+    </div>
+
+    <div class="section">
+      <div class="title">
+      </div>
+      <div id="test-box-13" class="testbox">
+        <p class="desc">hover me<br />ease-out 2s</p>
+      </div>
+    </div>
+    </div>
+
+    <div class="section">
+      <div class="title">
+      </div>
+      <div id="test-box-14" class="testbox">
+        <p class="desc">hover me<br />ease-in-out 2s</p>
+      </div>
+    </div>
+    </div>
+  </main>
+  <article id="article"></article>
+  <aside id="aside"></aside>
+  <footer id="footer"></footer>
+
 </body>
+
 </html>
