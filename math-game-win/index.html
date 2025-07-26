@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      --bgcolor: #E0F2F7;
+      --ok-btn-color: #3c57ee;
+      --question: #00796B;
+      --sel-answer: #FFB300;
+      --nav-color: #2236ac;
+      --top-menu-item: #1a297e;
+
+      --base-w: 414px;
+      --base-h: 900px;
+      --sz-unit: 36px;
+
+      --lg-text: 28px;
+      --mi-text: 20px;
+      --sm-text: 16px;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: beige;
+    }
+
+    #header {
+      margin: 0 auto;
+      width: var(--base-w);
+      height: calc(1.5 * var(--sz-unit));
+      background-color: var(--bgcolor);
+    }
+
+    #main {
+      margin: 0 auto;
+      width: var(--base-w);
+      min-height: 100vh;
+      background-color: var(--bgcolor);
+      padding-bottom: calc(2 * var(--sz-unit));
+    }
+
+    .container {
+      position: relative;
+      min-height: 100vh;
+      padding-bottom: calc(2 * var(--sz-unit));
+    }
+
+    #question_area {
+      position: absolute;
+      top: var(--sz-unit);
+      left: calc(1.5 * var(--sz-unit));
+      width: calc(8 * var(--sz-unit));
+      height: calc(2 * var(--sz-unit));
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: var(--question);
+    }
+
+    #select_answer_area {
+      position: absolute;
+      top: calc(4.5 * var(--sz-unit));
+      left: calc(4.0 * var(--sz-unit));
+      width: calc(5.5 * var(--sz-unit));
+      height: calc(4.5 * var(--sz-unit));
+      display: flex;
+      flex-wrap: wrap;
+      gap: calc(0.5 * var(--sz-unit));
+    }
+
+    .select_answer {
+      display: inline-block;
+      width: calc(2.5 * var(--sz-unit));
+      height: calc(2 * var(--sz-unit));
+      background-color: var(--sel-answer);
+      font-size: var(--lg-text);
+      font-weight: bold;
+      text-align: center;
+      line-height: calc(2 * var(--sz-unit));
+    }
+
+    .question_number {
+      font-size: var(--lg-text);
+      font-weight: bold;
+    }
+
+    .question_oper {
+      font-size: var(--lg-text);
+      font-weight: 400;
+    }
+
+    #input_answer_area {
+      position: absolute;
+      top: calc(10 * var(--sz-unit));
+      left: calc(2 * var(--sz-unit));
+      width: calc(8 * var(--sz-unit));
+      height: calc(2 * var(--sz-unit));
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: flex-end;
+      gap: calc(0.5 * var(--sz-unit));
+    }
+
+    #input_answer_box {
+      width: calc(4.5 * var(--sz-unit));
+      height: calc(1 * var(--sz-unit));
+    }
+
+    #input_answer_box input {
+      width: 96%;
+      height: 90%;
+      font-size: var(--sm-text);
+    }
+
+    #submit_answer {
+      width: calc(2.5 * var(--sz-unit));
+      height: calc(1.5 * var(--sz-unit));
+      font-size: var(--mi-text);
+      background-color: var(--ok-btn-color);
+      border: 0;
+    }
+
+    #nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    #top-menu {
+      width: calc(11 * var(--sz-unit));
+      height: 100%;
+      margin: 0 auto;
+      background-color: var(--nav-color);
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .top-menu-item {
+      width: calc(1.5 * var(--sz-unit));
+      height: calc(1.5 * var(--sz-unit));
+      background-color: var(--top-menu-item);
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header"></header>
+  <main id="main">
+    <div class="container">
+      <div class="section">
+        <div id="question_area">
+          <span class="question_number">115</span>
+          <span class="question_oper">+</span>
+          <span class="question_number">125</span>
+          <span class="question_oper">+</span>
+          <span class="question_number">125</span>
+        </div>
+      </div>
+      <div class="section">
+        <div id="select_answer_area">
+          <div id="select-1" class="select_answer">2221</div>
+          <div id="select-2" class="select_answer">2</div>
+          <div id="select-3" class="select_answer">3234</div>
+          <div id="select-4" class="select_answer">4</div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="input_answer_area">
+          <div id="input_answer_box">
+            <input type="number" />
+          </div>
+          <button id="submit_answer">確認</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <nav id="nav">
+    <div id="top-menu">
+      <div class="top-menu-item">
+      </div>
+      <div class="top-menu-item">
+      </div>
+      <div class="top-menu-item">
+      </div>
+      <div class="top-menu-item">
+      </div>
+    </div>
+  </nav>
+  <article id="article"></article>
+  <aside id="aside"></aside>
+  <footer id="footer"></footer>
+</body>
+
+</html>
