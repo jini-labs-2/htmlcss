@@ -9,10 +9,10 @@
     :root {
       --bgcolor: #E0F2F7;
       --ok-btn-color: #3c57ee;
-      --question: #00796B;
-      --sel-answer: #FFB300;
-      --nav-color: #2236ac;
-      --top-menu-item: #1a297e;
+      --q-bgcolor: #00796B;
+      --sel-answer-btnbgcolor: #FFB300;
+      --nav-bgcolor: #2236ac;
+      --nav-menu-itemcolor: #1a297e;
 
       --base-w: 414px;
       --base-h: 900px;
@@ -51,21 +51,50 @@
       padding-bottom: calc(2 * var(--sz-unit));
     }
 
+    #game_info_area {
+      position: absolute;
+      width: calc(var(--base-w) - (2 * var(--sz-unit)));
+      padding: 0 var(--sz-unit);
+      height: calc(3 * var(--sz-unit));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #game_title {
+      font-size: var(--mi-text);
+      font-weight: 600;
+    }
+
+    #game_info-1 {
+      width: calc(var(--base-w) - (2 * var(--sz-unit)));
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: var(--sm-text);
+    }
+
+    #game_info-2 {
+      width: calc(var(--base-w) - (2 * var(--sz-unit)));
+      padding-top: calc(0.5 * var(--sz-unit));
+      text-align: right;
+    }
+
     #question_area {
       position: absolute;
-      top: var(--sz-unit);
+      top: calc(4 * var(--sz-unit));
       left: calc(1.5 * var(--sz-unit));
       width: calc(8 * var(--sz-unit));
       height: calc(2 * var(--sz-unit));
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      background-color: var(--question);
+      background-color: var(--q-bgcolor);
     }
 
     #select_answer_area {
       position: absolute;
-      top: calc(4.5 * var(--sz-unit));
+      top: calc(7.5 * var(--sz-unit));
       left: calc(4.0 * var(--sz-unit));
       width: calc(5.5 * var(--sz-unit));
       height: calc(4.5 * var(--sz-unit));
@@ -78,7 +107,7 @@
       display: inline-block;
       width: calc(2.5 * var(--sz-unit));
       height: calc(2 * var(--sz-unit));
-      background-color: var(--sel-answer);
+      background-color: var(--sel-answer-btnbgcolor);
       font-size: var(--lg-text);
       font-weight: bold;
       text-align: center;
@@ -97,7 +126,7 @@
 
     #input_answer_area {
       position: absolute;
-      top: calc(10 * var(--sz-unit));
+      top: calc(13 * var(--sz-unit));
       left: calc(2 * var(--sz-unit));
       width: calc(8 * var(--sz-unit));
       height: calc(2 * var(--sz-unit));
@@ -138,7 +167,7 @@
       width: calc(11 * var(--sz-unit));
       height: 100%;
       margin: 0 auto;
-      background-color: var(--nav-color);
+      background-color: var(--nav-bgcolor);
       display: flex;
       justify-content: space-evenly;
       align-items: center;
@@ -147,7 +176,7 @@
     .top-menu-item {
       width: calc(1.5 * var(--sz-unit));
       height: calc(1.5 * var(--sz-unit));
-      background-color: var(--top-menu-item);
+      background-color: var(--nav-menu-itemcolor);
     }
   </style>
 </head>
@@ -156,6 +185,18 @@
   <header id="header"></header>
   <main id="main">
     <div class="container">
+      <div class="section">
+        <div id="game_info_area">
+          <span id="game_title">初心者向け</span>
+          <span id="game_info-1">
+            <label>ステップ：1</label>
+            <label>第 1 集</label>
+          </span>
+          <span id="game_info-2">
+            <label>進行: 1 / 2</label>
+          </span>
+        </div>
+      </div>
       <div class="section">
         <div id="question_area">
           <span class="question_number">115</span>
