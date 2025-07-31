@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-top: 100px;
+      gap: 2rem;
+    }
+
+    .translate-z-test {
+      width: 100px;
+      height: 100px;
+      border: 3px solid black;
+    }
+
+    .first {
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      background: tomato;
+      color: #fff;
+      text-align: center;
+      transition: .5s;
+    }
+
+    .first:hover {
+      /* 近く*/
+      transform: perspective(300px) translateZ(40px);
+      /* より近く*/
+      /* transform: perspective(100px) translateZ(40px); */
+    }
+  </style>
+</head>
+
+<body>
+  <section id="section">
+    <div class="translate-z-test">
+      <div class="first">
+        ITEM
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    header {
+      width: 100%;
+      height: 3rem;
+      line-height: 3rem;
+      text-align: center;
+      background: aqua;
+    }
+
+    nav {
+      border: 1px solid gray;
+
+      ul {
+        list-style: none;
+        display: flex;
+
+        li {
+          margin-right: 8px;
+          padding: 8px 16px;
+          border: 1px solid gray;
+          background-color: aquamarine;
+        }
+      }
+    }
+
+    footer {
+      display: block;
+      width: 100%;
+      height: 1.5rem;
+      background: greenyellow;
+      text-align: center;
+    }
+
+    .box {
+      width: 5rem;
+      height: 3rem;
+      background: black;
+      margin: 5px;
+      color: white;
+      text-align: center;
+      line-height: 3rem;
+    }
+
+    .test_case1 {
+      border: 1px solid blue;
+    }
+
+    .test_case1 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .test_case1 .test_case1_second {
+      display: flex;
+    }
+
+    .test_case2 {
+      border: 1px solid red;
+    }
+
+    .test_case2 .test_case2_first,
+    .test_case2_second,
+    .test_case2_third {
+      border: 1px solid tomato;
+    }
+
+    .test_case2 .test_case2_first {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .test_case2 .test_case2_second {
+      display: flex;
+      justify-content: center;
+    }
+
+    .test_case2 .test_case2_third {
+      display: flex;
+      justify-content: end;
+    }
+
+    .box2 {
+      width: 10rem;
+      height: 10rem;
+      background: darkolivegreen;
+      margin: 5px;
+      color: white;
+      text-align: center;
+      line-height: 3rem;
+    }
+
+    .test_case3 {
+      position: relative;
+    }
+
+    .test_case3_first {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      background: darkslategray;
+    }
+
+    .test_case3_second {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      width: 100px;
+      height: 100px;
+      background: darkgrey;
+    }
+  </style>
+</head>
+<header id="header">header</header>
+<nav id="nav">
+  <ul>
+    <li><a href="./absolute">absolute</a></li>
+    <li><a href="./fixed">fixed</a></li>
+    <li><a href="./sticky">sticky</a></li>
+  </ul>
+</nav>
+<main id="main">
+  <section>
+    <div class="position_test">
+      <h1 class="title">flex case 1</h1>
+      <div class="test_case1">
+        <div class="test_case1_first">
+          <div class="box">one</div>
+        </div>
+        <div class="test_case1_second">
+          <div class="box">two</div>
+          <div class="box">three</div>
+        </div>
+      </div>
+    </div>
+    <div class="position_test">
+      <h1 class="title">flex case 2</h1>
+      <div class="test_case2">
+        <div class="test_case2_first">
+          <div class="box">one</div>
+        </div>
+        <div class="test_case2_second">
+          <div class="box">two</div>
+        </div>
+        <div class="test_case2_third">
+          <div class="box">three</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer id="footer">footer</footer>
+
+<body>
+
+</body>
+
+</html>

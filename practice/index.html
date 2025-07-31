@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice</title>
+  <!-- <base href="http://news.yahoo.co.jp" /> -->
+  <!-- <base target="_target" href="https://google.co.jp" /> -->
+  <base target="_blank" href="https://google.co.jp" />
+
+  <template id="userRow">
+    <tr>
+      <td class="name"></td>
+      <td class="age"></td>
+    </tr>
+  </template>
+  <style>
+    .call-out-box {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-left: 5px solid #5cb85c;
+      /* 강조 색상 */
+    }
+
+    .call-out-box h2 {
+      color: #5cb85c;
+      margin-top: 0;
+    }
+
+    p,
+    dt {
+      font-weight: bold;
+    }
+
+    dl,
+    dd {
+      font-size: 0.9rem;
+    }
+
+    dd {
+      margin-bottom: 1em;
+    }
+
+    figure {
+      border: thin #c0c0c0 solid;
+      display: flex;
+      flex-flow: column;
+      padding: 5px;
+      max-width: 220px;
+      margin: auto;
+    }
+
+    img {
+      max-width: 220px;
+      max-height: 150px;
+    }
+
+    figcaption {
+      background-color: #222;
+      color: #fff;
+      font: italic smaller sans-serif;
+      padding: 3px;
+      text-align: center;
+    }
+
+    hr {
+      border: none;
+      border-top: 3px double #333;
+      color: #333;
+      overflow: visible;
+      text-align: center;
+      height: 5px;
+    }
+
+    hr::after {
+      background: #fff;
+      content: "A";
+      padding: 0 4px;
+      position: relative;
+      top: -13px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>내 웹사이트 제목</h1>
+    <search>
+      <form action="/search" method="get">
+        <label for="query">검색어:</label>
+        <input type="text" id="query" name="q" placeholder="검색어를 입력하세요">
+        <button type="submit">검색</button>
+      </form>
+    </search>
+  </header>
+  <hr />
+
+  <a href="/categories/domestic">domestic</a>
+  <a href="/categories">category</a>
+  <hr />
+  <h1>User List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody id="userTableBody">
+    </tbody>
+  </table>
+  <hr />
+  <article>
+    <h1>메인 콘텐츠 제목</h1>
+    <p>본문의 내용이 여기에 들어갑니다...</p>
+
+    <aside class="call-out-box">
+      <h2>참고 정보</h2>
+      <p>이것은 주요 콘텐츠와 관련된 추가 정보입니다.</p>
+      <ul>
+        <li><a href="#">관련 링크 1</a></li>
+        <li><a href="#">관련 링크 2</a></li>
+      </ul>
+    </aside>
+
+    <p>본문의 내용이 계속됩니다...</p>
+  </article>
+  <hr />
+
+  <article>
+    <hgroup>
+      <h1>최신 웹 개발 트렌드</h1>
+      <h3>반응형 디자인, PWA, 그리고 서버리스</h3>
+    </hgroup>
+    <p>최근 웹 개발 분야는 빠르게 변화하고 있으며...</p>
+  </article>
+  <article>
+    <hgroup>
+      <h1>미국, 금리 인상 단행</h1>
+      <h6>출처: 로이터 통신</h6>
+    </hgroup>
+    <p>미국 연방준비제도(Fed)는 오늘...</p>
+  </article>
+  <hr />
+  <section>
+    <h2>최신 소식</h2>
+    <article>
+      <h3>새로운 기능 출시</h3>
+      <p>오늘 저희 웹사이트에 새로운 기능이 추가되었습니다...</p>
+    </article>
+    <article>
+      <h3>서버 점검 안내</h3>
+      <p>다음 주에 서버 점검이 예정되어 있습니다...</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>자주 묻는 질문</h2>
+    <ul>
+      <li>질문 1: 답변 1</li>
+      <li>질문 2: 답변 2</li>
+    </ul>
+  </section>
+  <hr />
+
+  <dl>
+    <dt>Beast of Bodmin</dt>
+    <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+    <dt>Morgawr</dt>
+    <dd>A sea serpent.</dd>
+
+    <dt>Owlman</dt>
+    <dd>A giant owl-like creature.</dd>
+  </dl>
+  <hr />
+
+  <figure>
+    <img src="https://picsum.photos/600/300" alt="Elephant at sunset" />
+    <figcaption>An elephant at sunset</figcaption>
+  </figure>
+
+  <hr />
+  <p>최근에 본 영화는 <cite>기생충</cite>이었는데, 정말 인상 깊었습니다.</p>
+
+  <hr />
+  <p>최근에 본 영화는 <code>기생충</code>이었는데, 정말 인상 깊었습니다.</p>
+  <p>JavaScript에서 변수를 선언할 때는 <code>let</code>, <code>const</code>, <code>var</code> 키워드를 사용합니다.</p>
+  <p>JavaScript에서 변수를 선언할 때는 <em>let</em>, <code>const</code>, <code>var</code> 키워드를 사용합니다.</p>
+  <p>JavaScript에서 변수를 선언할 때는 <i>let</i>, <code>const</code>, <code>var</code> 키워드를 사용합니다.</p>
+  <p>JavaScript에서 변수를 선언할 때는 <mark>let</mark>, <code>const</code>, <code>var</code> 키워드를 사용합니다.</p>
+  <p>JavaScript에서 변수를 선언할 때는 (use s tag) <s>let</s>, <code>const</code>, <code>var</code> 키워드를 사용합니다.</p>
+  <p>JavaScript에서 변수를 선언할 때는 (use del tag) <del>let</del>, <code>const</code>, <code>var</code> 키워드를 사용합니다.</p>
+  <p>JavaScript에서 변수를 선언할 때는 (use ins tag) <ins>let</ins>, <code>const</code>, <code>var</code> 키워드를 사용합니다.</p>
+  <p>JavaScript에서 변수를 선언할 때는 (use samp tag) <ins>let</ins>, <code>const</code>, <code>var</code> 키워드를 사용합니다.</p>
+  <p>JavaScript에서 변수를 선언할 때는 (use small tag) <ins>let</ins>, <code>const</code>, <code>var</code> 키워드를 사용합니다.</p>
+  <p>10:10</p>
+  <p><time>10:10</time></p>
+  <hr />
+
+  <table>
+    <!-- <catption>test table caption</catption> -->
+    <thead>
+      <tr>
+        <th>1</th>
+        <th>2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>abc</td>
+        <td>efgh</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr />
+  <div>
+    <label>browser:</label>
+    <input type="text" id="browser" name="browser" list="browsers">
+    <datalist id="browsers">
+      <option value="Chrome">
+      <option value="Edge">
+      <option value="safari">
+
+    </datalist>
+  </div>
+  <hr />
+  <div>
+    <label for="counter">country:</label>
+    <select id="countery" name="countery">
+      <option value="kr">korean</option>
+      <option value="jp">japan</option>
+      <option value="cn">china</option>
+      <option value="us">usa</option>
+    </select>
+  </div>
+  <hr />
+  <div>
+    <label for="fuel">Fuel level:</label>
+
+    <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="90">
+      at 90/100
+    </meter>
+  </div>
+
+
+  <script>
+    const template = document.getElementById('userRow');
+    const tableBody = document.getElementById('userTableBody');
+    const users = [{ name: 'Alice', age: 30 }, { name: 'Bob', age: 25 }];
+
+    users.forEach(user => {
+      const row = template.content.cloneNode(true);
+      row.querySelector('.name').textContent = user.name;
+      row.querySelector('.age').textContent = user.age;
+      tableBody.appendChild(row);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #header {
+      width: 100%;
+      height: 3rem;
+      background: aqua;
+      line-height: 3rem;
+      text-align: center;
+    }
+
+    #nav {
+      width: 100%;
+      height: 3rem;
+      background: lightgray;
+      line-height: 3rem;
+      text-align: center;
+
+      ul {
+        list-style: none;
+        display: flex;
+
+        li {
+          border: 1px solid aquamarine;
+          padding: 0 16px;
+        }
+      }
+    }
+
+    #footer {
+      width: 100%;
+      height: 3rem;
+      margin-top: 2rem;
+      background: darkgray;
+      line-height: 3rem;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <wrap id="wrap">
+    <header id="header">header</header>
+    <nav id="nav">
+      <ul>
+        <li><a href="./x">transformX</a></li>
+        <li><a href="./y">transformY</a></li>
+        <li><a href="./z">transformZ</a></li>
+        <li><a href="./rotate">rotate</a></li>
+        <li><a href="./scale">scale</a></li>
+        <li><a href="./skew">skew</a></li>
+        <li><a href=""></a></li>
+      </ul>
+    </nav>
+    <main id="main"></main>
+    <footer id="footer">footer</footer>
+  </wrap>
+
+</body>
+
+</html>

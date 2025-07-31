@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=5">
+
+  <title>IE 互換性テスト</title>
+  <style>
+    div {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      border: 1px solid black;
+      margin-bottom: 10px;
+    }
+
+    .rounded {
+      border-radius: 10px;
+      /* CSS  */
+    }
+  </style>
+</head>
+
+<body>
+  <div>base div</div>
+  <div class="rounded">丸い div</div>
+  <div>
+    <input type="date">
+  </div>
+  <h1>ActiveX 컨트롤 테스트</h1>
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="200" height="200">
+    <param name="movie" value="your_activex_control.ocx">
+  </object>
+  <p>이 페이지는 ActiveX 컨트롤을 사용합니다.</p>
+
+</body>
+
+</html>

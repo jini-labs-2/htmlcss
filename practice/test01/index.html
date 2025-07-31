@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title>My Awesome Webpage</title>
+  <template id="userRow">
+    <tr>
+      <td class="name"></td>
+      <td class="age"></td>
+    </tr>
+  </template>
+</head>
+
+<body>
+  <h1>User List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody id="userTableBody">
+    </tbody>
+  </table>
+
+  <script>
+    const template = document.getElementById('userRow');
+    const tableBody = document.getElementById('userTableBody');
+    const users = [{ name: 'Alice', age: 30 }, { name: 'Bob', age: 25 }];
+
+    users.forEach(user => {
+      const row = template.content.cloneNode(true);
+      row.querySelector('.name').textContent = user.name;
+      row.querySelector('.age').textContent = user.age;
+      tableBody.appendChild(row);
+    });
+  </script>
+</body>
+
+</html>
